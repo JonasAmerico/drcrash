@@ -1,0 +1,30 @@
+{
+  "name": "drcrash",
+  "version": "1.0.0",
+  "description": "game",
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel": "babel game.js --watch --out-file gameout.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonasAmerico/drcrash.git"
+  },
+  "author": "jonasamerico",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JonasAmerico/drcrash/issues"
+  },
+  "homepage": "https://github.com/JonasAmerico/drcrash#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,215 @@
+ 
+AULA 2 ESTEVAN MAITO
+ESTUDOS JAVASCRIPT
+SEMPRE DECLARAR VARIAVEIS NO TOPO
+let - não permite acessar dentro do escopo
+const - é uma variavel imutavel, não altera os valores
+let num2 = num.toFixed(2); mostra apenas 2 numeros apos o ponto toFixed
+NaN - not a number - ex. quando uma variavel numerica soma com uma string
+
+ let a = 1;
+ document.write(a);
+
+ const b = 2;
+ document.write(b);
+
+ let num = 1.123123;
+ let num2 = num.toFixed(2); mostra apenas 2 numeros apos o ponto toFixed
+ document.write(typeof num2);
+
+ let num1 =  2;
+ let num2 = '3'
+ document.write(num1 + Number(num2));
+
+trabalhando com strings básico
+ let nome = 'Jonas ';
+ let snome = 'Americo';
+ let completo = nome + snome;
+ document.write(completo.length + '<br>');
+ document.write(completo.charAt(2) + '<br>');
+ document.write(completo.substring(0, 3) + '<br>');
+ document.write(completo.toLowerCase() + '<br>');
+ document.write(completo.toUpperCase() + '<br>');
+
+
+AULA 3 
+ESTEVAN MAITO
+
+  = atribui
+  == compara
+  != de diferença
+  === estritamente igual
+  !== estritamente diferente
+  && é o e - se acaso dentro do escopo tiver um evento falso ele sera falso
+pra dar true todos devem ser true taligado meu truta
+  ! operador de negação
+  : se não ( dentro do escopo)
+  ? operador ternário verdadeiro ou falso executa apos ser inserido
+
+ document.write(!(10 < 12) && (12 > 8));
+ document.write((10 > 2 ? 'é maior' : 'é menor' + '<br>'));
+ISTO ABAIXO È UM EXEMPLO DE ARRAY
+ let lista = ['sushi', 'parafuso' , 'amora'];
+ document.write(lista[0]); acessando o nome sushi = 0 no array
+ALTERANDO A ARRAY
+ let lista = ['sushi', 'parafuso' , 'amora'];
+ lista[1] = 'shoshanna';altera valor do array
+ document.write(lista[1]); acessa valor alterado 
+ADICIONANDO , REMOVENDO DADOS NA ARRAY
+let lista = ['sushi', 'parafuso' , 'amora'];
+ lista.pop(); apaga o ultimo valor do array
+lista.shift();  exclui o primeiro valor
+lista.unshift();  adiciona mais um valor no inicio do array create
+lista.push();  inseri no final do array
+lista.splice(1, 1); apaga somente o valor do array que voce deseja
+document.write(lista);
+ LAÇO DE REPETIÇÃO
+i++ é igua a i = i + 1;
+ let i = 0;
+
+ while(i <= 10){
+     document.write (i + '<br>');
+     i++;
+    
+ }
+
+ for (let i = 0; i <=10; i++){
+     document.write(i + '<br>');
+ }
+EXIBINDO DADOS DO ARRAY
+ let lista = ['sushi', 'parafuso' , 'amora'];
+ for (let i = 0; i < lista.length; i++){
+     document.write(lista[i] + '<br>');
+ }
+ IF E ELSE
+ if (3 === 3){
+     document.write('é igual' + '<br>');
+ }
+ let idade = 22;
+
+ if (idade === 22){
+     document.write('voce tem 22 anos');passa primeiro por esse bloco
+ } else if (idade >= 18){
+     document.write('maior de idade');
+ }else {
+     document.write('menor de idade');
+ }
+
+ for (let i = 0; i < 10; i++){
+     if (i === 3){
+          break;para
+         continue;continha
+     }
+     document.write(i + '<br>');
+ }
+SWITCH CASE NA FITA
+ let idade = 17;
+
+ switch (idade){
+     case 17:
+     document.write('tem 17' + '<br>');
+     break;
+     case 18:
+     document.write('tem 18' + '<br>');
+     break;
+     default:
+     document.write('Não sei!' + '<br>')
+     break;
+     todo switch deve terminar com um DEFAULT
+     SEMPRE UTILIZAR OS BREAKS NOS SWITCHS
+ }
+
+ let estudo = 35;
+
+ switch(estudo){
+     case 35:
+     document.write('acerto miseravi');
+     break;
+     default: 
+     document.write('vacilo');
+     break;
+ }
+
+AULA 4
+ESTEVAN MAITO
+OBJETOS E FUNCOES
+
+//isso é um objeto
+let caneta = {
+  //atribuindo PRORPRIEDADE ao OBJETO caneta
+  cor: 'preto',
+  marca: 'BIC'
+};
+document.write(caneta.cor + '<br>');
+document.write(caneta.marca + '<br>');
+///////////////////////////////////////////////////
+let esqueiro = {};
+//atribuindo propriedade ao OBJETO esqueiro de outra maneira
+esqueiro.cor = 'vermelho';
+esqueiro.tamanho = 'grande';
+
+document.write(esqueiro.tamanho + '<br>');
+document.write(esqueiro.cor + '<br>');
+
+let copo = {};
+copo['marca'] = 'GLASSES';
+document.write(copo.marca + '<br>');
+
+let skate = {};
+let propriedade = 'tamanho';
+skate[propriedade] = 'Grande';
+document.write(skate.tamanho + '<br>');
+
+//propriedade utilzando colchetes
+let cabo = {};
+cabo['cor do cabo'] = 'amarelo';
+document.write(cabo['cor do cabo'] + '<br>');
+
+//FUNCTIONS
+//ESTA FORMA É A FORMA DECLARADA DE FUNCAO
+
+let notebook = {
+  cor: 'preto',
+  minhaCor: function () {
+    return 'A cor do notebook é ' + this.cor
+  }
+};
+document.write(notebook.minhaCor() + '<br>');
+
+
+//function comUmNome (argumentos)
+function quadradoDe2() {
+  return 2 * 2;
+}
+
+document.write(quadradoDe2() + '<br>');
+
+function quadrado(num) {
+  return num * num;
+}
+document.write(quadrado(2) + '<br>');
+document.write(quadrado(8) + '<br>');
+document.write(quadrado(12) + '<br>');
+
+function soma(num1, num2) {
+  return num1 + num2;
+}
+document.write(soma(2, 4) + '<br>');
+document.write(soma(8, 6) + '<br>');
+document.write(soma(12, 8) + '<br>');
+
+//EXPRESSAO DE FUNCAO 
+//neste caso da pra chamar uma funcao dentro dela mesmo
+//neste caso chamo ela pela variavel no doc.write
+let divide = function dividindo(num1, num2) {
+  return num1 / num2;
+}
+document.write(divide(8, 4) + '<br>');
+
+//ARROW FUNCTION UMA FUNCAO SO QUE AGORA NO ES2015 ES6
+let subtrai = num => {
+  return num - num;
+}
+document.write(subtrai(2) + '<br>');
+
+AULA 5
